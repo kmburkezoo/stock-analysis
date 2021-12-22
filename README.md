@@ -1,6 +1,6 @@
 # VBA Stock Analysis
 ## Overview
-This project analyzed the performance of several stocks over a particular year. Since the dataset included sheets for two years and the amount of information contained in each was extensive, VBA was used to prompt the user to input a year, then calculate volume and return for all included stocks within that year. The script also included conditional formatting to help differentiate positive from negatively performing stocks. The code was also refactored in order to analyze the efficiency of two different methods--the first, using a for loop to cycle through the 12 different tickers; the second, using an index variable and storing the values in a series of arrays before outputting them to the spreadsheet.
+This project was designed to offer decision support for potential investors in green energy companies by analyzing the performance of 12 such stocks over a particular year. Since the dataset included sheets for two years and the amount of information contained in each was extensive, VBA was used to prompt the user to input a year, then calculate volume and return for all included stocks within that year. The script also included conditional formatting to help differentiate positive from negatively performing stocks. The code was also refactored in order to analyze the efficiency of two different methods--the first, using a for loop to cycle through the 12 different tickers; the second, using an index variable and storing the values in a series of arrays before outputting them to the spreadsheet.
 
 ## Results
 ### Yearly Stock Performance
@@ -11,7 +11,7 @@ Analyzing the performance of all stocks together, rather than any single stock o
 A drawback of the code as currently written is that it does not allow side-by-side analysis of the two years within the spreadsheet. However, viewing the two screenshots here, we can see that only two stocks had positive returns for both of the years under analysis. Based on the information presented here, there are three top candidates.
 1. ENPH is the clear frontrunner, with exceptional performance in 2017 and good returns in 2018. 
 2. RUN is also a strong contender. While it had only a 5% return in 2017, it fared comparably to ENPH in 2018.
-3. SEDG is also worth watching. While its returns in 2018 were negative, they were only slightly so, and it did even better than ENPH in 2017.
+3. SEDG is worth watching. While its returns in 2018 were negative, they were only slightly so, and it did even better than ENPH in 2017.
 
 ### Execution Times
 As mentioned in the overview, two different methods of analysis were compared:
