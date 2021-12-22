@@ -115,6 +115,21 @@ As mentioned in the overview, two different methods of analysis were compared:
 ```
 Method #2 was faster, but not by a significant amount: method 1 took .92 seconds for 2017 and .98 for 2018, while method 2 took .63 seconds for 2017 and.65 seconds for 2018. In a program that takes minutes or hours to run, a 30% time savings can mean a great deal; however, since both versions took less than a second to run, the refactoring did not result in any real time savings.
 
+Method 1 Performance
+
+![method 1 2017](https://github.com/kmburkezoo/stock-analysis/blob/main/Resources/2017_time_m1.png) ![method 1 2018](https://github.com/kmburkezoo/stock-analysis/blob/main/Resources/2018_time_m1.png)
+
+Method 2 Performance
+
+![method 2 2017](https://github.com/kmburkezoo/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png) ![method 2 2018](https://github.com/kmburkezoo/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png)
+
 ## Summary
 ### Refactoring Code
+In general, refactoring code can be extremely useful. It may be useful or even necessary to improve the performance of slow-running code, and it can be used to clean up duplicative code or simplify unnecessarily complex logic. As with any form of writing, it is very likely that the code writer's understanding of the task at hand and how best to accomplish it will have changed by the end of their first pass through the task in its entirety, and refactoring provides an opportunity to apply those new insights and make the finished product easier for others to read.
+
+However, refactoring is also subject to the possibility of diminishing returns. As noted in the results, a 30% performance gain on code that takes a lot of time or resources to run will have a large impact, but 30% of a second is a time difference that is barely noticeable to humans. Since refactoring can take quite a lot of time to do, the potential for gain in performance, readabilty, and reusability must be weighed against the amount of time needed to achieve it. 
+
 ### Refactoring _this_ Code
+For this particular analysis, the primary gain from refactoring was of knowledge rather than performance: I learned how to store the results of a for loop in an array, then loop through the arrays again to output the results onto the spreadsheet. Outside of this increase in knowledge, there wasn't much benefit in refactoring to use the second method: the two take comparable amounts of time and do not differ widely in how easy they are to read and understand.
+
+Moreover, the order of events in this assignment--write, refactor, anayze--meant that the refactoring did not have the benefit of any additional insights gained during the initial phases of analysis. Refactoring slightly improved the performance of the code, but it took me a long time to figure out, and since the code ran so quickly in the first place, the time was not spent addressing a real deficit. It would have been better spent in changing the output of the macro to apply what I realized in beginning this analysis: 1) that the ability to view side-by-side results from the two years analyzed would offer much better decision support than toggling between the two, and 2) that additional granularity in the color coding would help to further differentiate between stocks that barely broke even and those that really excelled in a given year, or between those with minimal and major losses. Updating the code to imiplement these two changes would result a greater improvement to an end user than a gain of .3 secons per run.
